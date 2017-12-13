@@ -1,9 +1,30 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 .background{
 	-fx-background-color: gray;
+	-fx-pref-width: 800px;
+	-fx-pref-height: 640px;
 }
 
-.btn{
-	-fx-percent-width: 100%;
-	-fx-percent-height: 100%;
+.menuBtn{
+	-fx-pref-width: 300px;
+	-fx-pref-height: 40px;
+	-fx-font-size: 20px;
+	-fx-background-color: white;
+	-fx-border-color: black;
+	-fx-border-width: 4px;
+	-fx-border-radius: 0px;
+}
+
+.gameBtn{
+	-fx-pref-width: 120px;
+	-fx-pref-height: 120px;
+	-fx-font-size: 15px;
+	-fx-background-color: white;
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+	-fx-border-radius: 0px;
+}
+
+#canvasPane{
+	-fx-border-color: black;
+	-fx-border-width: 4px;
 }

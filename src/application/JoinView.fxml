@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.Pane?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</BorderPane>
-
+<Pane styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="WHITE" layoutX="240.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nothing here :(">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Button id="backToMenuJoin" layoutX="250.0" layoutY="358.0" mnemonicParsing="false" styleClass="menuBtn" text="Back" />
+   </children>
+</Pane>

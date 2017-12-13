@@ -3,22 +3,17 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-
-<BorderPane stylesheets="@application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
-   <center>
-      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="800.0" styleClass="background" BorderPane.alignment="CENTER">
+<AnchorPane styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" spacing="30" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <VBox alignment="CENTER" layoutX="252.0" layoutY="107.0" prefHeight="427.0" prefWidth="296.0">
-               <children>
-                  <Button mnemonicParsing="false" styleClass="btn" text="Button" />
-                  <Button mnemonicParsing="false" styleClass="btn" text="Button" />
-                  <Button mnemonicParsing="false" styleClass="btn" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-               </children>
-            </VBox>
+            <Button id="newGame" styleClass="menuBtn" text="New Game" />
+            <Button id="joinGame" styleClass="menuBtn" text="Join Game" />
+            <Button id="about" styleClass="menuBtn" text="About" />
+            <Button id="exit" styleClass="menuBtn" text="Exit" />
          </children>
-      </Pane>
-   </center>
-</BorderPane>
+      </VBox>
+   </children>
+</AnchorPane>

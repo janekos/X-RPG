@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.GridPane?>
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</GridPane>
-
+<AnchorPane styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane id="canvasPane" layoutX="240.0" layoutY="220.0" prefHeight="620.0" prefWidth="660.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+         	
+            <Canvas height="620.0" width="660.0" />
+         </children>
+      </Pane>
+      <VBox prefWidth="120.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      	<children>
+      		<Button id="inventory" styleClass="gameBtn" text="Inventory" />
+      		<Button id="meh" styleClass="gameBtn" text="meh" />
+      		<Button id="meh" styleClass="gameBtn" text="meh" />
+      		<Button id="meh" styleClass="gameBtn" text="meh" />
+      		<Button id="backToMenu" styleClass="gameBtn" text="Back to Menu" />
+      	</children>
+      </VBox>
+   </children>
+</AnchorPane>
