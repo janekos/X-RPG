@@ -53,7 +53,7 @@ public class Main extends Application {
 		
 		changeView(menuView);
 		
-		Scene scene = new Scene(root,800,640);
+		Scene scene = new Scene(root,800,660);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
 		stage.setResizable(false);
