@@ -25,6 +25,7 @@ public class Main extends Application {
 		StackPane root = new StackPane();
 		AnchorPane menuView = FXMLLoader.load(getClass().getResource("MenuView.fxml"));
 		AnchorPane gameView = FXMLLoader.load(getClass().getResource("GameView.fxml"));
+		PlayGame pg = new PlayGame(gameView);
 		Pane joinView = FXMLLoader.load(getClass().getResource("JoinView.fxml"));
 		root.getChildren().addAll(menuView, gameView, joinView);
 		
@@ -34,7 +35,10 @@ public class Main extends Application {
 		Button about = (Button) menuView.lookup("#about");
 		Button exit = (Button) menuView.lookup("#exit");
 		
-		newGame.setOnAction(e -> {changeView(gameView);});		
+		newGame.setOnAction(e -> {
+			changeView(gameView);
+			pg.start();
+		});		
 		joingame.setOnAction(e -> {changeView(joinView);});
 		about.setOnAction(e -> {System.out.println("about");});
 		exit.setOnAction(e -> {stage.close();});

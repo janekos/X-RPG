@@ -8,10 +8,10 @@
 
 <AnchorPane styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane id="canvasPane" layoutX="240.0" layoutY="220.0" prefHeight="620.0" prefWidth="660.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <Pane id="canvasPane" layoutX="240.0" layoutY="220.0" prefHeight="620.0" prefWidth="640.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-         	
-            <Canvas height="620.0" width="660.0" />
+            <Canvas id="character" height="620.0" width="640.0" />
+            <Canvas id="world" height="620.0" width="640.0" />
          </children>
       </Pane>
       <VBox prefWidth="120.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
