@@ -2,9 +2,9 @@ package application;
 
 public class Config {
 	//public static Tile BUSH_GRASS_TILE = new Tile("BUSH_GRASS_TILE", "tiles/twoD/BUSH_GRASS_TILE.png", false, false);
-	public static Tile DIRT = new Tile("DIRT", "tiles/twoD/DIRT_TILE.png", true, false);
+	public static Tile DIRT = new Tile("DIRT", "file:tiles/twoD/DIRT_TILE.png", true, false);
 	//public static Tile GRASS_DARKER = new Tile("GRASS_DARKER", "tiles/twoD/GRASS_DARKER_TILE.png", true, false);
-	public static Tile GRASS = new Tile("GRASS", "tiles/twoD/GRASS_TILE.png", true, false);
+	public static Tile GRASS = new Tile("GRASS", "file:tiles/twoD/GRASS_TILE.png", true, false);
 	/*public static Tile HOUSE_LOWER_LEFT_GRASS = new Tile("HOUSE_LOWER_LEFT_GRASS", "tiles/twoD/HOUSE_LOWER_LEFT_GRASS_TILE.png", false, true);
 	public static Tile HOUSE_LOWER_RIGHT_GRASS = new Tile("HOUSE_LOWER_RIGHT_GRASS", "tiles/twoD/HOUSE_LOWER_RIGHT_GRASS_TILE.png", false, true);
 	public static Tile HOUSE_UPPER_LEFT_GRASS = new Tile("HOUSE_UPPER_LEFT_GRASS", "tiles/twoD/HOUSE_UPPER_LEFT_GRASS_TILE.png", false, true);
