@@ -1,7 +1,7 @@
 package application;
 
 public class Config {
-	public Tile[][] map1 = {
+	public static Tile[][] map1 = {
 		{Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT },
 		{Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT },
 		{Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT },
@@ -13,7 +13,7 @@ public class Config {
 		{Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT },
 		{Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT, Tile.GRASS, Tile.DIRT }
 	};
-	public Tile[][] map2 = {
+	public static Tile[][] map2 = {
 		
 	};
 }

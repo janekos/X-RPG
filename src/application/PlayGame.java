@@ -15,10 +15,14 @@ public class PlayGame {
 	}
 	
 	public void start() {
-		draw2D();
+		drawMap(Config.map1);
 	}
 	
-	private void draw2D() {
-		
+	private void drawMap(Tile[][] map) {
+		for(int i = 0; i<10; i++) {
+			for(int j = 0; j<10; j++) {
+				world.fillRect(i*64, j*64, 64, 64);
+			}
+		}
 	}
 }
