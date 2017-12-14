@@ -37,7 +37,7 @@ public class Tile2D {
 	public static Tile2D TREE_GRASS = new Tile2D("TREE_GRASS", "file:src\\tiles\\twoD\\TREE_GRASS_TILE.png", false, false);
 	public static Tile2D TREE_GRASS_METAL_FENCE_LEFT_DARKER = new Tile2D("TREE_GRASS_DARKER", "file:src\\tiles\\twoD\\TREE_GRASS_METAL_FENCE_LEFT_DARKER_TILE.png", false, false);
     public static Tile2D TREE_GRASS_METAL_FENCE_RIGHT_DARKER = new Tile2D("TREE_GRASS_DARKER", "file:src\\tiles\\twoD\\TREE_GRASS_METAL_FENCE_RIGHT_DARKER_TILE.png", false, false);
-    public static Tile2D METAL_FENCE_LEFT_DIRT = new Tile2D("METAL_FENCE_DIRT", "file:src\\tiles\\twoD\\METAL_FENCE_LEFT_GRASS_TILE.png", false, false);
-    public static Tile2D METAL_FENCE_RIGHT_DIRT = new Tile2D("METAL_FENCE_DIRT", "file:src\\tiles\\twoD\\METAL_FENCE_RIGHT_GRASS_TILE.png", false, false);
+    public static Tile2D METAL_FENCE_LEFT_DIRT = new Tile2D("METAL_FENCE_DIRT", "file:src\\tiles\\twoD\\METAL_FENCE_LEFT_GRASS_TILE.png", true, false);
+    public static Tile2D METAL_FENCE_RIGHT_DIRT = new Tile2D("METAL_FENCE_DIRT", "file:src\\tiles\\twoD\\METAL_FENCE_RIGHT_GRASS_TILE.png", true, false);
     public static Tile2D GRASS_DARKER_HOLE = new Tile2D("GRASS_DARKER_HOLE", "file:src\\tiles\\twoD\\GRASS_DARKER_HOLE_TILE.png", true, false);
 }

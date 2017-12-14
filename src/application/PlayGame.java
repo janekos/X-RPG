@@ -27,31 +27,26 @@ public class PlayGame {
 		
 		p.addEventFilter(KeyEvent.KEY_PRESSED,e -> {
 			KeyCode key = ((KeyEvent) e).getCode();
-			if(key == KeyCode.W) {
-				Config.characters1[TileCharacter.PLAYER.getLocX()][TileCharacter.PLAYER.getLocY()] = null;
-				TileCharacter.PLAYER.setLocX(TileCharacter.PLAYER.getLocX() - 1);
+			if(key == KeyCode.W || key == KeyCode.D || key == KeyCode.S || key == KeyCode.A) {
+				int pX = TileCharacter.PLAYER.getLocX();
+				int pY = TileCharacter.PLAYER.getLocY();
+				
+				Config.characters1[pX][pY] = null;
+				
+				if(key == KeyCode.W) {if(pX - 1 != -1 && Config.map1[pX-1][pY].getWalkable()) {TileCharacter.PLAYER.setLocX(pX - 1);}}
+				else if(key.equals(KeyCode.D)) {if(pY + 1 != 10 && Config.map1[pX][pY+1].getWalkable()) {TileCharacter.PLAYER.setLocY(pY + 1);}}
+				else if(key.equals(KeyCode.S)) {if(pX+1 != 10 && Config.map1[pX+1][pY].getWalkable()) {TileCharacter.PLAYER.setLocX(pX + 1);}}
+				else if(key.equals(KeyCode.A)) {if(pY-1 != -1 && Config.map1[pX][pY-1].getWalkable()) {TileCharacter.PLAYER.setLocY(pY - 1);}}
+				
 				Config.characters1[TileCharacter.PLAYER.getLocX()][TileCharacter.PLAYER.getLocY()] = TileCharacter.PLAYER;
 				drawCharactersTwoD();
-			}else if(key.equals(KeyCode.D)) {
-				Config.characters1[TileCharacter.PLAYER.getLocX()][TileCharacter.PLAYER.getLocY()] = null;
-				TileCharacter.PLAYER.setLocY(TileCharacter.PLAYER.getLocY() + 1);
-				Config.characters1[TileCharacter.PLAYER.getLocX()][TileCharacter.PLAYER.getLocY()] = TileCharacter.PLAYER;
-				drawCharactersTwoD();
-			}else if(key.equals(KeyCode.S)) {
-				Config.characters1[TileCharacter.PLAYER.getLocX()][TileCharacter.PLAYER.getLocY()] = null;
-				TileCharacter.PLAYER.setLocX(TileCharacter.PLAYER.getLocX() + 1);
-				Config.characters1[TileCharacter.PLAYER.getLocX()][TileCharacter.PLAYER.getLocY()] = TileCharacter.PLAYER;
-				drawCharactersTwoD();
-			}else if(key.equals(KeyCode.A)) {
-				Config.characters1[TileCharacter.PLAYER.getLocX()][TileCharacter.PLAYER.getLocY()] = null;
-				TileCharacter.PLAYER.setLocY(TileCharacter.PLAYER.getLocY() - 1);
-				Config.characters1[TileCharacter.PLAYER.getLocX()][TileCharacter.PLAYER.getLocY()] = TileCharacter.PLAYER;
-				drawCharactersTwoD();
+						
 			}
 		});
 	}
 	
 	private void drawOpenTwoD(Tile2D[][] map) {
+		clearCanvas(world);
 		blackSpace.fillRect(0, 0, 640, 640);
 		for(int i = 0; i<10; i++) {
 			for(int j = 0; j<10; j++) {
@@ -61,7 +56,7 @@ public class PlayGame {
 	}
 	
 	private void drawCharactersTwoD() {
-		character.clearRect(0, 0, 640, 640);
+		clearCanvas(character);
 		for(int i = 0; i<10; i++) {
 			for(int j = 0; j<10; j++) {
 				try {
@@ -71,15 +66,8 @@ public class PlayGame {
 		}		
 	}
 	
-	/*private void drawCloseTwoD(Tile[][] map) {
-		blackSpace.fillRect(0, 0, 640, 640);
-		
-		for(int i = 0; i<10; i++) {
-			for(int j = 0; j<10; j++) {
-				if() { }
-				world.drawImage(map[i][j].getImg(), i*128, j*128, 128, 128);
-			}
-		}
-	}*/
+	private void clearCanvas(GraphicsContext c) {
+		c.clearRect(0, 0, 640, 640);
+	}
 	
 }
