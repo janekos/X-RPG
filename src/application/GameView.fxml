@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.canvas.*?>
 <?import javafx.scene.control.*?>
@@ -8,19 +9,47 @@
 
 <AnchorPane styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane id="canvasPane" layoutX="240.0" layoutY="220.0" prefHeight="640.0" prefWidth="640.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <Pane layoutX="240.0" layoutY="220.0" prefHeight="640.0" prefWidth="640.0" styleClass="canvasPane" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
             <Canvas id="blackSpace" height="640.0" width="640.0" />
             <Canvas id="world" height="640.0" width="640.0" />
             <Canvas id="character" height="640.0" width="640.0" />
+            <Pane id="fightPane" opacity="0.0" prefHeight="640.0" prefWidth="640.0" styleClass="backgroundColor">
+               <children>
+                  <VBox layoutX="7.0" layoutY="465.0" prefHeight="168.0" prefWidth="627.0" styleClass="canvasPane">
+                     <children>
+                        <HBox prefHeight="81.0" prefWidth="619.0">
+                           <children>
+                              <Button id="btnAttack" mnemonicParsing="false" styleClass="fightBtn" text="Attack" />
+                              <Button id="btnDefend" mnemonicParsing="false" styleClass="fightBtn" text="Defend" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="77.0" prefWidth="619.0">
+                           <children>
+                              <Button id="btnHeal" mnemonicParsing="false" styleClass="fightBtn" text="Heal" />
+                              <Button id="btnRun" mnemonicParsing="false" styleClass="fightBtn" text="Run" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Canvas id="fightCanvas" height="462.0" width="640.0" />
+               </children>
+            </Pane>
          </children>
       </Pane>
       <VBox prefWidth="120.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
       	<children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Health: 100">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Stamina: 100">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
       		<Button id="inventory" styleClass="gameBtn" text="Inventory" />
-      		<Button id="meh" styleClass="gameBtn" text="meh" />
-      		<Button id="meh" styleClass="gameBtn" text="meh" />
-      		<Button id="meh" styleClass="gameBtn" text="meh" />
       		<Button id="backToMenu" styleClass="gameBtn" text="Back to Menu" />
       	</children>
       </VBox>
